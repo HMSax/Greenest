@@ -1,5 +1,5 @@
 public class Cactus extends Plant {          //exempel på arv
-    private final Nutrienttype nutrientFluidType = Nutrienttype.MINERALWATER;   //inkapsling av varibel, använder enum
+    private final Nutrienttype nutrientFluidType = Nutrienttype.MINERALWATER;   //inkapsling, använder enum
 
     public Cactus(String name, double plantHeightInMeters) {
         super(name, plantHeightInMeters);

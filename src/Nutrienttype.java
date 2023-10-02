@@ -6,6 +6,6 @@ public enum Nutrienttype {
     public final String type;
 
     Nutrienttype (String s){
-        type = s;
+        this.type = s;
     }
 }

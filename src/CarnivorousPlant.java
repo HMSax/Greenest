@@ -1,5 +1,5 @@
 public class CarnivorousPlant extends Plant {        //exempel på arv
-    private final Nutrienttype nutrientFluidType = Nutrienttype.PROTEINDRINK;   //inkapsling av varibel, använder enum
+    private final Nutrienttype nutrientFluidType = Nutrienttype.PROTEINDRINK;   //inkapsling, använder enum
 
     public CarnivorousPlant(String name, double plantHeightInMeters) {
         super(name, plantHeightInMeters);

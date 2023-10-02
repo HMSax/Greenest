@@ -1,5 +1,5 @@
 public class Palmtree extends Plant {        //exempel på arv
-    private final String nutrientFluidType = "tap water";       //inkapsling av varibel, final då den inte ska kunna ändras
+    private final Nutrienttype nutrientFluidType = Nutrienttype.TAPWATER;   //inkapsling av varibel, använder enum
 
     public Palmtree(String name, double plantHeightInMeters) {
         super(name, plantHeightInMeters);
@@ -10,6 +10,6 @@ public class Palmtree extends Plant {        //exempel på arv
     }
 
     public String getNutrientFluidType() {
-        return nutrientFluidType;
+        return nutrientFluidType.type;
     }
 }

@@ -10,6 +10,6 @@ public class CarnivorousPlant extends Plant {        //exempel på arv
     }
 
     public String getNutrientFluidType() {
-        return nutrientFluidType.type;
+        return nutrientFluidType.getType();
     }
 }

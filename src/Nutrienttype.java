@@ -3,9 +3,13 @@ public enum Nutrienttype {
     TAPWATER("tap water"),
     MINERALWATER("mineral water");
 
-    public final String type;
+    private final String type;
 
     Nutrienttype(String s) {
         this.type = s;
+    }
+
+    public String getType() {
+        return type;
     }
 }

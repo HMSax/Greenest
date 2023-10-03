@@ -1,5 +1,5 @@
 public class Palmtree extends Plant {        //exempel på arv
-    private final Nutrienttype nutrientFluidType = Nutrienttype.TAPWATER;   //inkapslin, använder enum
+    private final Nutrienttype nutrientFluidType = Nutrienttype.TAPWATER;   //inkapsling, använder enum
 
     public Palmtree(String name, double plantHeightInMeters) {
         super(name, plantHeightInMeters);

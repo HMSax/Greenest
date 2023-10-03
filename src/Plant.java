@@ -14,9 +14,11 @@ abstract public class Plant implements GetInfo {    //superklass för alla plant
 
     public String getName() {
         return name;
+
     }
 
     public double getPlantHeightInMeters() {
         return plantHeightInMeters;
+
     }
 }

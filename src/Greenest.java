@@ -23,25 +23,35 @@ public class Greenest {
         boolean repeat = true;
         try {
             while (repeat) {    //upprepar frågan tills input matchar namnet på en planta i plantList
-                String notInList = "NotInList";
-                String plantName = JOptionPane.showInputDialog("Which plant would you like info about?").toLowerCase().trim();
+                boolean notInList = true;
+                String plantName = JOptionPane.showInputDialog(null, "Which plant would you like info about?",
+                        "Greenest Plant Hotel", JOptionPane.INFORMATION_MESSAGE);
+                plantName = plantName.toLowerCase().trim();
                 for (Plant plant : plantList) { //vid namnmatchning hämtas info om önskad vätska/vätskemängd via interface
                     if (plant.getName().toLowerCase().trim().equals(plantName)) {
                         int repeatChoice = JOptionPane.showConfirmDialog(null,
                                 plant.getName() + " wants " + dailyRequiredFluid(plant)
                                         + " litres of " + nutrientFluidType(plant) + ".\n"
-                                        + "Would you like info about another plant?");
-                        notInList = plantName;
+                                        + "Would you like info about another plant?",
+                                plant.getName().toUpperCase() + " INFORMATION", JOptionPane.YES_NO_CANCEL_OPTION);
+                        notInList = false;
                         repeat = repeatChoice == JOptionPane.YES_OPTION;    //om användaren klickar på "Yes" upprepas loopen.
                     }
                 }
-                if (notInList.equals("NotInList")) {
-                    JOptionPane.showMessageDialog(null, plantName + " is not a resident of this hotel.");
+                if (notInList) {    //meddelanden vid felaktig input
+                    if (plantName.isEmpty()) {
+                        JOptionPane.showMessageDialog(null, "Please write the name of a plant.",
+                                "Greenest Plant Hotel", JOptionPane.INFORMATION_MESSAGE);
+                    } else {
+                        JOptionPane.showMessageDialog(null, plantName + " is not a resident of this hotel.",
+                                "Greenest Plant Hotel", JOptionPane.INFORMATION_MESSAGE);
+                    }
                 }
             }
         } catch (Exception ignored) {
         }
-        JOptionPane.showMessageDialog(null, "Goodbye!");
+        JOptionPane.showMessageDialog(null, "Goodbye!",
+                "Greenest Plant Hotel", JOptionPane.INFORMATION_MESSAGE);
     }
 
     public String nutrientFluidType(GetInfo any) {  //metod hämtar önskad vätsketyp via interfacet GetInfo

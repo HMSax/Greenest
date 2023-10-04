@@ -1,4 +1,4 @@
-abstract public class Plant implements GetInfo {    //superklass för alla plantor, implementerar interfacet
+abstract public class Plant implements GetInfo {    //superklass för alla plantor
 
     private String name;                            //inkapsling av variblerna
     private double plantHeightInMeters;

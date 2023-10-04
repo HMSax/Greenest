@@ -16,15 +16,16 @@ public class Greenest {
         plantList.add(olof);
         plantList.add(meatloaf);
 
-        userQuestion();
+        userView();
     }
 
-    private void userQuestion() throws NullPointerException {    //allt användaren ser finns i denna metod
+    private void userView() throws NullPointerException {    //det användaren ser finns i denna metod
         boolean repeat = true;
         try {
             while (repeat) {    //upprepar frågan tills input matchar namnet på en planta i plantList
                 boolean notInList = true;
-                String plantName = JOptionPane.showInputDialog(null, "Which plant would you like info about?",
+                String plantName = JOptionPane.showInputDialog(
+                        null, "Which plant would you like info about?",
                         "Greenest Plant Hotel", JOptionPane.INFORMATION_MESSAGE);
                 plantName = plantName.toLowerCase().trim();
                 for (Plant plant : plantList) { //vid namnmatchning hämtas info om önskad vätska/vätskemängd via interface

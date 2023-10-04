@@ -1,9 +1,8 @@
 public interface GetInfo {
-    default double dailyRequiredFluidAmount() {      //metod som returnerar önskad daglig vätskemängd i liter.
-        return this.dailyRequiredFluidAmount();
-    }
+    double dailyRequiredFluidAmount();       //metod som returnerar önskad daglig vätskemängd i liter.
 
-    default String getNutrientFluidType() {          //metod som returnerar önskad vätsketyp.
-        return this.getNutrientFluidType();
-    }
+
+    String getNutrientFluidType();           //metod som returnerar önskad vätsketyp.
+
+
 }

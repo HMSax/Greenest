@@ -1,4 +1,4 @@
-public class Palmtree extends Plant implements GetInfo {        //exempel på arv
+public class Palmtree extends Plant implements GetInfo {        //exempel på arv, klassen implementerar interfacet
     private final Nutrienttype nutrientFluidType = Nutrienttype.TAPWATER;   //inkapsling, använder enum
 
     public Palmtree(String name, double plantHeightInMeters) {

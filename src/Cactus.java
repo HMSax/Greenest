@@ -1,4 +1,4 @@
-public class Cactus extends Plant implements GetInfo {          //exempel på arv
+public class Cactus extends Plant implements GetInfo {          //exempel på arv, klassen implementerar interfacet
     private final Nutrienttype nutrientFluidType = Nutrienttype.MINERALWATER;   //inkapsling, använder enum
 
     public Cactus(String name, double plantHeightInMeters) {

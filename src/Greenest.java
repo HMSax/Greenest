@@ -3,7 +3,7 @@ import javax.swing.*;
 public class Greenest {
 
     Greenest() throws NullPointerException {
-        Hotel greenest = new Hotel();
+        Hotel greenest = new Hotel("Greenest Plant Hotel");
 
         Plant igge = new Cactus("Igge", 0.2);       //polymorfism
         Plant laura = new Palmtree(" Laura", 5);
@@ -21,7 +21,7 @@ public class Greenest {
                 boolean notInList = true;
                 String plantName = JOptionPane.showInputDialog(
                         null, "Which plant would you like info about?",
-                        "Greenest Plant Hotel", JOptionPane.INFORMATION_MESSAGE).toLowerCase().trim();
+                        greenest.getHotelName(), JOptionPane.INFORMATION_MESSAGE).toLowerCase().trim();
                 for (Plant plant : greenest.getPlantList()) { //vid namnmatchning hämtas info om önskad vätska/vätskemängd via interface
                     if (plant.getName().toLowerCase().trim().equals(plantName)) {
                         int repeatChoice = JOptionPane.showConfirmDialog(null,
@@ -36,17 +36,17 @@ public class Greenest {
                 if (notInList) {    //meddelanden vid felaktig input
                     if (plantName.isEmpty()) {
                         JOptionPane.showMessageDialog(null, "Please write the name of a plant.",
-                                "Greenest Plant Hotel", JOptionPane.INFORMATION_MESSAGE);
+                                greenest.getHotelName(), JOptionPane.INFORMATION_MESSAGE);
                     } else {
                         JOptionPane.showMessageDialog(null, plantName + " is not a resident of this hotel.",
-                                "Greenest Plant Hotel", JOptionPane.INFORMATION_MESSAGE);
+                                greenest.getHotelName(), JOptionPane.INFORMATION_MESSAGE);
                     }
                 }
             }
         } catch (Exception ignored) {
         }
         JOptionPane.showMessageDialog(null, "Goodbye!",
-                "Greenest Plant Hotel", JOptionPane.INFORMATION_MESSAGE);
+                greenest.getHotelName(), JOptionPane.INFORMATION_MESSAGE);
     }
 
     public String nutrientFluidType(GetInfo any) {  //hämtar önskad vätsketyp via interfacet GetInfo

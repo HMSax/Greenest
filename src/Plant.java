@@ -1,12 +1,12 @@
-abstract public class Plant implements GetInfo {    //superklass för alla plantor
+abstract public class Plant implements GetInfo {    //Superklass för alla plantor.
 
-    private String name;                            //inkapsling av variblerna
+    private String name;                            //Inkapsling av varibler
     private double plantHeightInMeters;
 
     public Plant() {
     }
 
-    public Plant(String name, double plantHeightInMeters) { //superkonstruktor
+    public Plant(String name, double plantHeightInMeters) { //Superkonstruktor
         this.name = name;
         this.plantHeightInMeters = plantHeightInMeters;
 

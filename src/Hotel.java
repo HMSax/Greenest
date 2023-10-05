@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Hotel {
-    private List<Plant> plantList = new ArrayList<>();
+    private List<Plant> plantList = new ArrayList<>();  //Inkapsling
     private String hotelName;
     public Hotel(String name) {
         this.hotelName = name;

@@ -1,5 +1,5 @@
-public class CarnivorousPlant extends Plant implements GetInfo {    //exempel på arv, klassen implementerar interfacet
-    private final Nutrienttype nutrientFluidType = Nutrienttype.PROTEINDRINK;   //inkapsling, använder enum
+public class CarnivorousPlant extends Plant implements GetInfo {    //Exempel på arv. klassen implementerar interfacet.
+    private final Nutrienttype nutrientFluidType = Nutrienttype.PROTEINDRINK;   //Inkapsling. Använder enum.
 
     public CarnivorousPlant(String name, double plantHeightInMeters) {
         super(name, plantHeightInMeters);
